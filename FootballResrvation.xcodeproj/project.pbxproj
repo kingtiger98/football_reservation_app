@@ -13,6 +13,7 @@
 		4C689AB82A0E07820050A30A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C689AB62A0E07820050A30A /* Main.storyboard */; };
 		4C689ABA2A0E07830050A30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C689AB92A0E07830050A30A /* Assets.xcassets */; };
 		4C689ABD2A0E07830050A30A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C689ABB2A0E07830050A30A /* LaunchScreen.storyboard */; };
+		4C689AC72A0E0BE70050A30A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C689AC62A0E0BE70050A30A /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4C689AB92A0E07830050A30A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C689ABC2A0E07830050A30A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C689ABE2A0E07830050A30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C689AC62A0E0BE70050A30A /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4C689AB22A0E07820050A30A /* SceneDelegate.swift */,
 				4C689AB42A0E07820050A30A /* ViewController.swift */,
 				4C689AB62A0E07820050A30A /* Main.storyboard */,
+				4C689AC62A0E0BE70050A30A /* MyTableViewCell.swift */,
 				4C689AB92A0E07830050A30A /* Assets.xcassets */,
 				4C689ABB2A0E07830050A30A /* LaunchScreen.storyboard */,
 				4C689ABE2A0E07830050A30A /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C689AB52A0E07820050A30A /* ViewController.swift in Sources */,
+				4C689AC72A0E0BE70050A30A /* MyTableViewCell.swift in Sources */,
 				4C689AB12A0E07820050A30A /* AppDelegate.swift in Sources */,
 				4C689AB32A0E07820050A30A /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z9S6MZGC9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FootballResrvation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z9S6MZGC9J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FootballResrvation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
