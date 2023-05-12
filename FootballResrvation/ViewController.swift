@@ -72,7 +72,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // 테이블뷰 필수 메서드
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        
+        // 풋살장 수만큼 row 갯수 생성하도록
+        guard let rnum = placeData?.listPublicReservationSport.listTotalCount else {
+            print("nil 입니다") // 가져오는데 시간이 걸려서 로그가 찍히는 것임
+            return 0
+        }
+        return rnum
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,9 +87,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("nil입니다.")
             return UITableViewCell()
         }
-        cell.placeName.text = "\(indexPath.row)"
+        
+        cell.placeName.text = placeData?.listPublicReservationSport.row[indexPath.row].placenm
+        cell.placeName.adjustsFontSizeToFitWidth = true // 글자가 너무 길면 자동으로 크기 줄이기
+        cell.reservationState.text = placeData?.listPublicReservationSport.row[indexPath.row].svcstatnm
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40 // 셀 높이
+    }
+
+
+
     
     func getData(){
         
@@ -109,6 +125,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             do { // do문 안에 디코딩 부분(try)을 넣으면 된다.
                 let decodedData = try decodcoder.decode(PlaceData.self, from: JSONdata)
                 self.placeData = decodedData // decodedData를 테이블뷰에서 사용하기위해
+
                 DispatchQueue.main.async { // UI관련 소스는 메인 스레드에서 처리하기 위한 과정
                     self.table.reloadData()
                 }
@@ -116,11 +133,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print(error)
             }
         }
-        
         // 네트워킹 4_2단계 : task시작하기
         task.resume()
     }
-    
 }
 
 
