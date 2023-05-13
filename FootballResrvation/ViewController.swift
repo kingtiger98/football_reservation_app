@@ -90,14 +90,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.placeName.text = placeData?.listPublicReservationSport.row[indexPath.row].placenm
         cell.placeName.adjustsFontSizeToFitWidth = true // 글자가 너무 길면 자동으로 크기 줄이기
+        
+        cell.locationName.text = placeData?.listPublicReservationSport.row[indexPath.row].areanm
         cell.reservationState.text = placeData?.listPublicReservationSport.row[indexPath.row].svcstatnm
+        
+        cell.layer.cornerRadius = 10
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0))
+
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40 // 셀 높이
+        return 80 + 10
     }
-
+    
 
 
     
