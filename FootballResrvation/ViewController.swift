@@ -67,10 +67,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
+
         getData()
+        naviSet()
     }
     
     // 테이블뷰 필수 메서드
+    // row 갯수 지정 메서드
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // 풋살장 수만큼 row 갯수 생성하도록
@@ -81,6 +84,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return rnum
     }
     
+    // 셀 생성 메서드
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // cell을 MyTableViewCell로 다운캐스팅하여 프로퍼티 접근
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as? MyTableViewCell else {
@@ -94,10 +98,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.locationName.text = placeData?.listPublicReservationSport.row[indexPath.row].areanm
         cell.reservationState.text = placeData?.listPublicReservationSport.row[indexPath.row].svcstatnm
         
-        cell.layer.cornerRadius = 10
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0))
-
-        
         return cell
     }
     
@@ -105,9 +105,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 80 + 10
     }
     
+    // 데이터 전달
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segue.identifier가 showDetail이면 if문 실행
+        if segue.identifier == "showDetail" {
+            // nextVC에 segue.destination을 넣고 segue.destination으로 다운캐스팅
+            guard let nextVC = segue.destination as? PlaceDetailViewController else { return }
+            // 선택한 셀의 row값을 selectRow에 저장
+            guard let selectRow = self.table.indexPathForSelectedRow?.row else { return }
+            // 두 번째 뷰의 프로퍼티에 값을 저장
+            nextVC.receivedPlaceNm = placeData?.listPublicReservationSport.row[selectRow].placenm
+            nextVC.receivedURL = placeData?.listPublicReservationSport.row[selectRow].svcurl
+            nextVC.receivedPlaceLoca = placeData?.listPublicReservationSport.row[selectRow].areanm
+            nextVC.receivedMoneyState = placeData?.listPublicReservationSport.row[selectRow].payatnm
+            nextVC.receivedReservationVali = placeData?.listPublicReservationSport.row[selectRow].svcstatnm
+            nextVC.receivedPlaceTel = placeData?.listPublicReservationSport.row[selectRow].telno
+            nextVC.receiveduseDate = placeData?.listPublicReservationSport.row[selectRow].svcnm
 
-
+        }
+    }
     
+    // 스크롤 내릴 때 네비게이션 바 불투명해지는 현상 예방
+    func naviSet(){
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    // 네트워킹 4단계
     func getData(){
         
         // "풋살장"을 그냥 url뒤에 쓰면 문자열이 인코딩되지 않아 오류가 발생해 아래와 같이 URL에 삽입할 수 있는 ASCII 문자로 변환해서 합해줘야함!
@@ -143,6 +168,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // 네트워킹 4_2단계 : task시작하기
         task.resume()
     }
+    
 }
 
 
