@@ -18,8 +18,15 @@ class PlaceDetailViewController: UIViewController {
     var receivedMoneyState: String?
     var receivedReservationTime: String?
     var receiveduseDate: String?
-    var receiveduseTime: String?
+    
+    var receiveduseTimeMin: String?
+    var receiveduseTimeMax: String?
+
     var receivedPlaceTel: String?
+    
+    var receivedReservationTime1: String?
+    var receivedReservationTime2: String?
+
     
     // 받아온 프로퍼티를 저장해 화면에 보여줄 아웃렛 변수
     @IBOutlet weak var PlaceNm: UILabel!
@@ -37,21 +44,55 @@ class PlaceDetailViewController: UIViewController {
         getValue()
     }
 
-    func getValue(){
-        guard let placeNm = receivedPlaceNm, let placeLoca = receivedPlaceLoca, let reservationvali = receivedReservationVali,
-              let moneystate = receivedMoneyState, let placetel = receivedPlaceTel, let usedate = receiveduseDate
-        
-        else { return print("전 뷰에서 값 가져오기 실패") }
-        PlaceNm.text = placeNm
-        PlaceLoca.text = placeLoca
-        ReservationVali.text = reservationvali
-        MoneyState.text = moneystate
-        PlaceTel.text = placetel
-        useDate.text = usedate
+    func getValue() {
+        guard let placeNm = receivedPlaceNm,
+              let placeLoca = receivedPlaceLoca,
+              let reservationvali = receivedReservationVali,
+              let moneystate = receivedMoneyState,
+              let placetel = receivedPlaceTel,
+              let usedate = receiveduseDate,
+              let usetimeMin = receiveduseTimeMin,
+              let usetimeMax = receiveduseTimeMax,
+              let reservationtime1 = receivedReservationTime1,
+              let reservationtime2 = receivedReservationTime2
+        else {
+            print("전 뷰에서 값 가져오기 실패")
+            return
+        }
 
-        // 레이블 내 문자열 길면 글자 작아지게
-        self.PlaceNm.adjustsFontSizeToFitWidth = true
-        self.useDate.adjustsFontSizeToFitWidth = true
+        PlaceNm.text = placeNm
+        PlaceLoca.text = "장소 : " + placeLoca
+        ReservationVali.text = "예약 가능 여부 : " + reservationvali
+        MoneyState.text = "요금유무 : " + moneystate
+
+        if let dotRange1 = reservationtime1.range(of: ".") {
+            let formattedTime1 = String(reservationtime1[..<dotRange1.lowerBound])
+            ReservationTime.text = "예약 접수 시간\n" + "접수 시작 : " + formattedTime1 + "\n접수 종료 : "
+        }
+
+        if let dotRange2 = reservationtime2.range(of: ".") {
+            let formattedTime2 = String(reservationtime2[..<dotRange2.lowerBound])
+            ReservationTime.text?.append(formattedTime2)
+        }
+
+        useDate.text = "사용 가능 요일\n" + usedate
+        useTime.text = "사용 가능 시간 : " + usetimeMin + " ~ " + usetimeMax
+        PlaceTel.text = "전화번호 : " + placetel
+
+        // 레이블 내 문자열이 길면 글자를 작게 조절
+        PlaceNm.adjustsFontSizeToFitWidth = true
+        useDate.adjustsFontSizeToFitWidth = true
+    }
+
+    
+    
+    // 전화 걸기 버튼
+    
+    @IBAction func callBtn(_ sender: UIButton) {
+        guard let phoneNumber = receivedPlaceTel, let url = URL(string: "tel://\(phoneNumber)") else {
+                return print("Invalid phone number")
+            }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     // 예약사이트 연결 버튼

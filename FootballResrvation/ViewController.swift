@@ -121,7 +121,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             nextVC.receivedReservationVali = placeData?.listPublicReservationSport.row[selectRow].svcstatnm
             nextVC.receivedPlaceTel = placeData?.listPublicReservationSport.row[selectRow].telno
             nextVC.receiveduseDate = placeData?.listPublicReservationSport.row[selectRow].svcnm
-
+            nextVC.receiveduseTimeMin = placeData?.listPublicReservationSport.row[selectRow].vMin
+            nextVC.receiveduseTimeMax = placeData?.listPublicReservationSport.row[selectRow].vMax
+            nextVC.receivedReservationTime1 = placeData?.listPublicReservationSport.row[selectRow].rcptbgndt
+            nextVC.receivedReservationTime2 = placeData?.listPublicReservationSport.row[selectRow].rcptenddt
+            
         }
     }
     

@@ -77,7 +77,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울시 풋살장 예약현황⚽️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7p-Yh-Hjc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚽️서울시 풋살장 예약현황" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7p-Yh-Hjc">
                                 <rect key="frame" x="16" y="104" width="277" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
@@ -114,61 +114,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="풋살장 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52n-s6-1Tx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="풋살장 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52n-s6-1Tx">
                                 <rect key="frame" x="16" y="132" width="343" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBQ-z1-4ij">
-                                <rect key="frame" x="16" y="549" width="343" height="55"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="eC0-WD-3CH"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="예약 하기">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="urlBtn:" destination="Nst-t4-FYV" eventType="touchUpInside" id="cUd-UP-jbF"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="mSz-QS-Mpo">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="mSz-QS-Mpo">
                                 <rect key="frame" x="16" y="191.00000000000003" width="343" height="319.66666666666674"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="풋살장 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-BY-H7E">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-BY-H7E">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="21.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예약 가능 여부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmD-qb-Nqf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요금유무" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i2-0C-waq">
                                         <rect key="frame" x="0.0" y="49.666666666666657" width="343" height="21.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요금 유무" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i2-0C-waq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예약 가능 여부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmD-qb-Nqf">
                                         <rect key="frame" x="0.0" y="99.333333333333314" width="343" height="21.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예약 접수 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpf-2d-iod">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예약 접수 시간" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpf-2d-iod">
                                         <rect key="frame" x="0.0" y="149" width="343" height="21.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용 가능 요일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSq-Q1-HJl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용 가능 요일" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSq-Q1-HJl">
                                         <rect key="frame" x="0.0" y="198.66666666666669" width="343" height="21.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="풋살장 이용 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDY-6O-GmH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="사용 가능 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDY-6O-GmH">
                                         <rect key="frame" x="0.0" y="248.33333333333329" width="343" height="21.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -182,17 +167,52 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBQ-z1-4ij">
+                                <rect key="frame" x="16" y="679" width="343" height="46"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="OPC-yJ-Xoz"/>
+                                    <constraint firstAttribute="height" constant="46" id="Pgl-74-jjp"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="🗓️ 예약 하기">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="urlBtn:" destination="Nst-t4-FYV" eventType="touchUpInside" id="cUd-UP-jbF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5Q-xm-YDv">
+                                <rect key="frame" x="16" y="624" width="343" height="47"/>
+                                <color key="backgroundColor" red="0.39607840779999998" green="0.76862752440000004" blue="0.40000003579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="ThL-e7-2hu"/>
+                                    <constraint firstAttribute="width" constant="343" id="zEF-7O-5lP"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="☎️ 전화 걸기">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="callBtn:" destination="Nst-t4-FYV" eventType="touchUpInside" id="q1H-kR-01x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Vf-bB-mnf"/>
                         <color key="backgroundColor" red="0.21960783" green="0.4588235021" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="mSz-QS-Mpo" firstAttribute="top" secondItem="52n-s6-1Tx" secondAttribute="bottom" constant="36" id="0la-RS-twI"/>
-                            <constraint firstItem="mSz-QS-Mpo" firstAttribute="trailing" secondItem="EBQ-z1-4ij" secondAttribute="trailing" id="dC6-pz-jEq"/>
-                            <constraint firstItem="mSz-QS-Mpo" firstAttribute="leading" secondItem="EBQ-z1-4ij" secondAttribute="leading" id="hiv-q3-e2s"/>
-                            <constraint firstItem="4Vf-bB-mnf" firstAttribute="bottom" secondItem="EBQ-z1-4ij" secondAttribute="bottom" constant="174" id="i37-HV-2gT"/>
+                            <constraint firstItem="k5Q-xm-YDv" firstAttribute="leading" secondItem="mSz-QS-Mpo" secondAttribute="leading" id="1iV-dQ-ICm"/>
+                            <constraint firstItem="k5Q-xm-YDv" firstAttribute="leading" secondItem="EBQ-z1-4ij" secondAttribute="leading" id="HCG-ZW-BYO"/>
+                            <constraint firstItem="EBQ-z1-4ij" firstAttribute="centerX" secondItem="9xd-kJ-h3w" secondAttribute="centerX" id="HQ3-Z0-85o"/>
+                            <constraint firstAttribute="bottom" secondItem="k5Q-xm-YDv" secondAttribute="bottom" constant="141" id="KSr-Kh-f5y"/>
                             <constraint firstItem="mSz-QS-Mpo" firstAttribute="trailing" secondItem="52n-s6-1Tx" secondAttribute="trailing" id="jej-JK-Cfj"/>
+                            <constraint firstItem="EBQ-z1-4ij" firstAttribute="top" secondItem="k5Q-xm-YDv" secondAttribute="bottom" constant="8" id="kX3-ob-LaG"/>
                             <constraint firstItem="52n-s6-1Tx" firstAttribute="top" secondItem="4Vf-bB-mnf" secondAttribute="top" constant="38" id="kZq-LZ-UFu"/>
                             <constraint firstItem="52n-s6-1Tx" firstAttribute="leading" secondItem="9xd-kJ-h3w" secondAttribute="leadingMargin" id="kba-jo-ASz"/>
+                            <constraint firstItem="k5Q-xm-YDv" firstAttribute="centerX" secondItem="9xd-kJ-h3w" secondAttribute="centerX" id="rTA-EA-xw9"/>
                             <constraint firstItem="mSz-QS-Mpo" firstAttribute="leading" secondItem="52n-s6-1Tx" secondAttribute="leading" id="rYs-O0-qwq"/>
                             <constraint firstItem="52n-s6-1Tx" firstAttribute="trailing" secondItem="9xd-kJ-h3w" secondAttribute="trailingMargin" id="y4E-bN-rUk"/>
                         </constraints>
