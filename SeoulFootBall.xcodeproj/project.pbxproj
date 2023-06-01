@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C689AAD2A0E07820050A30A /* FootballResrvation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballResrvation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C689AAD2A0E07820050A30A /* SeoulFootBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeoulFootBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C689AB02A0E07820050A30A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C689AB22A0E07820050A30A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4C689AB42A0E07820050A30A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		4C689AAE2A0E07820050A30A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C689AAD2A0E07820050A30A /* FootballResrvation.app */,
+				4C689AAD2A0E07820050A30A /* SeoulFootBall.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C689AAC2A0E07820050A30A /* FootballResrvation */ = {
+		4C689AAC2A0E07820050A30A /* SeoulFootBall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C689AC12A0E07830050A30A /* Build configuration list for PBXNativeTarget "FootballResrvation" */;
+			buildConfigurationList = 4C689AC12A0E07830050A30A /* Build configuration list for PBXNativeTarget "SeoulFootBall" */;
 			buildPhases = (
 				4C689AA92A0E07820050A30A /* Sources */,
 				4C689AAA2A0E07820050A30A /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = FootballResrvation;
+			name = SeoulFootBall;
 			productName = FootballResrvation;
-			productReference = 4C689AAD2A0E07820050A30A /* FootballResrvation.app */;
+			productReference = 4C689AAD2A0E07820050A30A /* SeoulFootBall.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C689AA82A0E07820050A30A /* Build configuration list for PBXProject "FootballResrvation" */;
+			buildConfigurationList = 4C689AA82A0E07820050A30A /* Build configuration list for PBXProject "SeoulFootBall" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C689AAC2A0E07820050A30A /* FootballResrvation */,
+				4C689AAC2A0E07820050A30A /* SeoulFootBall */,
 			);
 		};
 /* End PBXProject section */
@@ -303,12 +303,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.hjh.FootballResrvation;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.hjh.SeoulFootBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -331,12 +332,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.hjh.FootballResrvation;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.hjh.SeoulFootBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C689AA82A0E07820050A30A /* Build configuration list for PBXProject "FootballResrvation" */ = {
+		4C689AA82A0E07820050A30A /* Build configuration list for PBXProject "SeoulFootBall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C689ABF2A0E07830050A30A /* Debug */,
@@ -356,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C689AC12A0E07830050A30A /* Build configuration list for PBXNativeTarget "FootballResrvation" */ = {
+		4C689AC12A0E07830050A30A /* Build configuration list for PBXNativeTarget "SeoulFootBall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C689AC22A0E07830050A30A /* Debug */,
