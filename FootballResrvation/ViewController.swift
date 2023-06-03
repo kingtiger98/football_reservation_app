@@ -78,7 +78,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // 풋살장 수만큼 row 갯수 생성하도록
         guard let rnum = placeData?.listPublicReservationSport.listTotalCount else {
-            print("nil 입니다") // 가져오는데 시간이 걸려서 로그가 찍히는 것임
             return 0
         }
         return rnum
